@@ -1,4 +1,5 @@
 def bienvenida():
+    j = 10
     print("Bienvenido")
 
 numero = 7
