@@ -102,11 +102,11 @@ def recibir_disparo(tablero, coordenada, tablero_disparos):
           return True
 
 def menu():
-    print("-----------MENU-----------")    
+    print("-----------MENU------------")    
     print("Escoge lo que quieres hacer:")
     print("1. Ver mi tablero: 'mt'")
     print("2. Ver tablero maquina: 'tm'")
     print("3. Salir: 'salir'")
-    print("--------------------------")
+    print("---------------------------")
     print("Introduce una coordenada en formato 'fila.columna':")
     return input()

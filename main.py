@@ -4,7 +4,7 @@ import utils as f
 import time
 
 # main
-print("--- Hundir la flota ---")
+print("----- HUNDIR LA FLOTA -----")
 
 # INICIALIZAR JUEGO
 # Llamo a la funcion crear_tablero para crear mi tablero y el de la maquina
