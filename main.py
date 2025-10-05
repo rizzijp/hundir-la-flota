@@ -1,6 +1,7 @@
 import numpy as np
 from numpy import random
 import utils as f
+import time
 
 # main
 print("-Hundir la flota-\n¿Listo para jugar? (y/n)")
@@ -83,6 +84,8 @@ elif respuesta.lower() == "y":
             # Llamo a la funcion para disparar a mi tablero
             tocado = True
             while tocado == True:
+                # Espero 3 segundos para el siguiente disparo
+                time.sleep(3)
                 coordenada = tuple(map(int, random.randint(mi_tablero.shape[0], size = 2)))
                 print("Dispara la maquina")
                 tocado = f.recibir_disparo(mi_tablero, coordenada, mi_tablero_disparos)
@@ -109,6 +112,8 @@ elif respuesta.lower() == "y":
                     # Llamo a la funcion para disparar a mi tablero
                     tocado = True
                     while tocado == True:
+                        # Espero 3 segundos para el siguiente disparo
+                        time.sleep(3)
                         coordenada = tuple(map(int, random.randint(mi_tablero.shape[0], size = 2)))
                         print("Dispara la maquina")
                         tocado = f.recibir_disparo(mi_tablero, coordenada, mi_tablero_disparos)
