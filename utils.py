@@ -101,65 +101,12 @@ def recibir_disparo(tablero, coordenada, tablero_disparos):
           print("Ya ha disparado aqui. Prueba de nuevo")
           return True
 
-# INTRODUCIR COORDENADAS
-def introducir_coordenada(tablero_maquina):
-    print("Introduce una coordenada en formato 'fila.columna':")
-    while True:
-        x = input()
-        fil_col = x.split(".")
-        try: 
-            coord = []
-            for e in fil_col:
-                coord.append(int(e))
-            coord = tuple(coord)
-
-            tam_tablero = tuple(range(tablero_maquina.shape[0]))
-
-            if coord[0] in tam_tablero and coord[1] in tam_tablero:
-                return coord
-            else:
-                print("Coordenada no válida. Vuelve a ingresarla.")
-        except Exception:
-            print("Formato no válido. Vuelve a ingresar la coordenada.")
-
 def menu():
     print("-----------MENU-----------")    
     print("Escoge lo que quieres hacer:")
     print("1. Ver mi tablero: 'mt'")
     print("2. Ver tablero maquina: 'tm'")
-    print("3. Disparar: 'dis'")
-    print("4. Salir: 'salir'")
+    print("3. Salir: 'salir'")
+    print("--------------------------")
+    print("Introduce una coordenada en formato 'fila.columna':")
     return input()
-
-def juego():
-    print("-----JUGANDO-----")
-    print("Seguir jugando? (y/n)")  
-    print("Volver al menu: 'm'")
-    return input()
-
-'''
-def jugar(): 
-
-    # Si disparo yo
-    # Llamo a la funcion para disparar al tablero de la maquina
-
-    tocado = True
-    while tocado == True:
-        coordenada = introducir_coordenada(tablero_maquina)
-        tocado = recibir_disparo(tablero_maquina, coordenada, tablero_maquina_disparos)
-
-    print("Como veo el tablero de la maquina luego de mi disparo")
-    print(tablero_maquina_disparos)
-    print()
-    # Si dispara la maquina
-    # Llamo a la funcion para disparar a mi tablero
-    tocado = True
-    while tocado == True:
-        coordenada = tuple(map(int, random.randint(mi_tablero.shape[0], size = 2)))
-        print("Dispara la maquina")
-        tocado = recibir_disparo(mi_tablero, coordenada, mi_tablero_disparos)
-    print("Como ve la maquina mi tablero luego de su disparo")
-    print(mi_tablero_disparos)
-
-'''
-
