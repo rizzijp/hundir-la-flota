@@ -84,8 +84,8 @@ elif respuesta.lower() == "y":
             # Llamo a la funcion para disparar a mi tablero
             tocado = True
             while tocado == True:
-                # Espero 2 segundos para el siguiente disparo
-                time.sleep(2)
+                # Espero 1 segundo para el siguiente disparo
+                time.sleep(1)
                 coordenada = tuple(map(int, random.randint(mi_tablero.shape[0], size = 2)))
                 print("Dispara la maquina")
                 tocado = f.recibir_disparo(mi_tablero, coordenada, mi_tablero_disparos)
@@ -112,8 +112,8 @@ elif respuesta.lower() == "y":
                     # Llamo a la funcion para disparar a mi tablero
                     tocado = True
                     while tocado == True:
-                        # Espero 2 segundos para el siguiente disparo
-                        time.sleep(2)
+                        # Espero 1 segundos para el siguiente disparo
+                        time.sleep(1)
                         coordenada = tuple(map(int, random.randint(mi_tablero.shape[0], size = 2)))
                         print("Dispara la maquina")
                         tocado = f.recibir_disparo(mi_tablero, coordenada, mi_tablero_disparos)
